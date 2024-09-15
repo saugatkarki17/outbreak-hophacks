@@ -98,7 +98,7 @@ const Map = () => {
           onChange={e => setSelectedDisease(e.target.value)}
           className="dropdown" 
         >
-          <option value="COVID-19" >COVID-19</option>
+          <option value="COVID-19" >Covid-19</option>
           <option value="Flu">Flu</option>
           <option value="Measles">Measles</option>
           <option value="Ebola">Ebola</option>

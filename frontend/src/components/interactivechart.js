@@ -23,10 +23,10 @@ const InteractiveChart = () => {
           labels: labels,
           datasets: [
             {
-              label: 'Predicted Cases over Time',
+              label: 'Cases over Time',
               data: cases,
-              borderColor: 'rgba(75, 192, 192, 1)',
-              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+              borderColor: '#757FB2',
+              backgroundColor: '#757FB2',
               fill: true,
               tension: 0.4 // Makes the line curved
             }
@@ -50,7 +50,11 @@ const InteractiveChart = () => {
       },
       title: {
         display: true,
-        text: 'Predicted Disease Cases Over Time',
+        text: 'Covid-19 Trend OverTime',
+        font: {
+            size: 50, 
+            
+          }
       },
     },
     interaction: {
@@ -75,7 +79,7 @@ const InteractiveChart = () => {
   };
 
   return (
-    <div>
+    <div className='graph-div' style={{ width: '1000px', height: '600px' }}> {/* Adjust size here */}
       {loading ? <p>Loading chart...</p> : <Line data={chartData} options={options} />}
     </div>
   );
