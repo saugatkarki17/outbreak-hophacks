@@ -30,8 +30,17 @@
 .stats div {
   font-size: 1rem;
   text-align: center;
+  font-size: 15px;
 }
-
+.stats-initial {
+  display: flex;
+  align-items: center;
+}
+ .stats-initial-p {
+ margin-right: 0.3rem;
+ font-weight: 600;
+letter-spacing: 0.1px;
+}
 /* nav */
 
 .nav {
@@ -57,9 +66,9 @@
 
 }
 .link {
-  font-size: 15px;
+  font-size: 14.2px;
   color: #4d4d4d;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 0.2px;
   display: flex;
   align-items: center;
@@ -72,12 +81,13 @@
 }
 .dropdown {
   padding: 15px 26px;
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.2px;
   color: #4d4d4de7;
   outline: none;
   border: none;
+  background-color: #ffffffe2;
 }
 .search {
   width: 15rem;

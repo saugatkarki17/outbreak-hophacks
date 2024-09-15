@@ -106,11 +106,11 @@ const Map = () => {
         </select>
 
         <div className="stats">
-          <div>Location: {clickedLocation}</div>
-          <div>Total Cases: {clickedStats ? clickedStats.totalCases : globalStats.totalCases}</div>
-          <div>Total Recovered: {clickedStats ? clickedStats.totalRecovered : globalStats.totalRecovered}</div>
-          <div>Total Deaths: {clickedStats ? clickedStats.totalDeaths : globalStats.totalDeaths}</div>
-          <div>Total Active: {clickedStats ? clickedStats.totalActive : globalStats.totalActive}</div>
+          <div className='stats-initial'><p className='stats-initial-p'>Location: </p>{clickedLocation}</div>
+          <div className='stats-initial'><p className='stats-initial-p'>Total Cases:</p> {clickedStats ? clickedStats.totalCases : globalStats.totalCases}</div>
+          <div className='stats-initial'><p className='stats-initial-p'>Total Recovered:</p> {clickedStats ? clickedStats.totalRecovered : globalStats.totalRecovered}</div>
+          <div className='stats-initial'><p className='stats-initial-p'>Total Deaths:</p> {clickedStats ? clickedStats.totalDeaths : globalStats.totalDeaths}</div>
+          <div className='stats-initial'><p className='stats-initial-p'>Total Active:</p> {clickedStats ? clickedStats.totalActive : globalStats.totalActive}</div>
         </div>
       </div>
 
