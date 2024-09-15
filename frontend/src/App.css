@@ -52,8 +52,8 @@ letter-spacing: 0.1px;
 }
 
 .logoDiv {
-  width: 10rem;
-  height: 5rem;
+  width: 8rem;
+  height: 3.8rem;
   background-image: url(./images/OUTSPREAD.png);
   background-position: center;
   background-size: contain;
@@ -126,4 +126,45 @@ cursor: pointer;
 }
 .search-p {
   left: 10px;
+}
+
+
+/* footer */
+
+.footer-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 17rem;
+}
+
+.footer-about {
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+}
+.logoDiv-footer {
+  width: 12rem;
+  height: 7rem;
+  background-image: url(./images/OUTSPREAD.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.logoDiv-footer-about {
+  text-align: left;
+  font-size: 13px;
+  color: #656565;
+  letter-spacing: 0.1px;
+}
+#quick-links {
+  font-weight: bold;
+  font-size: 16px;
+  color: #757FB2;
+}
+#quick-links-f {
+  color: #585858;
+  font-weight: 500;
+  letter-spacing: 0.1px;
 }
