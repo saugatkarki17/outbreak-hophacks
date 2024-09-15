@@ -1,5 +1,7 @@
 /* colors #757FB2   #4d4d4d */
-
+body {
+scroll-behavior: smooth;
+}
 .graph-div {
   margin-left: auto;
   margin-right: auto;
