@@ -1335,6 +1335,86 @@ const outbreaks = [
     active_cases: 2000,
     recovered: 11000,
     deaths: 1000
+  },
+  {
+    location: "India",
+    lat: 20.5937,
+    lng: 78.9629,
+    disease: "Flu",
+    cases: 103000,
+    active_cases: 17000,
+    recovered: 82000,
+    deaths: 4000
+  },
+  {
+    location: "Pakistan",
+    lat: 30.3753,
+    lng: 69.3451,
+    disease: "Flu",
+    cases: 72000,
+    active_cases: 12000,
+    recovered: 58000,
+    deaths: 2000
+  },
+  {
+    location: "Bangladesh",
+    lat: 23.6850,
+    lng: 90.3563,
+    disease: "Flu",
+    cases: 110000,
+    active_cases: 18000,
+    recovered: 89000,
+    deaths: 3000
+  },
+  {
+    location: "Nepal",
+    lat: 28.3949,
+    lng: 84.1240,
+    disease: "Flu",
+    cases: 24000,
+    active_cases: 4000,
+    recovered: 19000,
+    deaths: 1000
+  },
+  {
+    location: "Sri Lanka",
+    lat: 7.8731,
+    lng: 80.7718,
+    disease: "Flu",
+    cases: 20000,
+    active_cases: 3500,
+    recovered: 16000,
+    deaths: 500
+  },
+  {
+    location: "Bhutan",
+    lat: 27.5142,
+    lng: 90.4336,
+    disease: "Flu",
+    cases: 8000,
+    active_cases: 1200,
+    recovered: 6500,
+    deaths: 300
+  },
+  {
+    location: "Maldives",
+    lat: 3.2028,
+    lng: 73.2207,
+    disease: "Flu",
+    cases: 5000,
+    active_cases: 800,
+    recovered: 4000,
+    deaths: 200
+  },
+  {
+    location: "Afghanistan",
+    lat: 33.9391,
+    lng: 67.7100,
+    disease: "Flu",
+    cases: 29000,
+    active_cases: 5000,
+    recovered: 23000,
+    deaths: 1000
   }
     
   ];

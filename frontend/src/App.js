@@ -1,11 +1,14 @@
 import './App.css';
 import Map from './components/Map';
+import Navigation from './components/nav';
 
 function App() {
   return (
+
     <div className="App">
-      <h1>Global Health Disease Outbreak Tracker</h1>
-      <Map />
+      <Navigation />
+      <Map/>
+      
     </div>
 
   );

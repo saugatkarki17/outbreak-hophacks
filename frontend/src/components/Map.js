@@ -27,6 +27,12 @@ const Map = () => {
       let url = '';
       if (disease === 'Flu') {
         url = 'http://localhost:5000/api/flu-outbreaks';  // Fetch flu-specific data
+      } else if (disease === 'Ebola') {
+        url = 'http://localhost:5000/api/Ebola-outbreaks';  // Fetch Ebola-specific data
+      } else if (disease === 'Dengue') {
+        url = 'http://localhost:5000/api/Dengue-outbreaks';  // Fetch Dengue-specific data
+      } else if (disease === 'Measles') {
+        url = 'http://localhost:5000/api/Measles-outbreaks';  // Fetch Measles-specific data
       } else {
         url = `http://localhost:5000/api/outbreaks?disease=${disease}`;  // Fetch general disease data
       }
@@ -34,6 +40,7 @@ const Map = () => {
       setOutbreaks(response.data);
     } catch (error) {
       console.error("Error fetching disease data:", error);
+      alert("Failed to fetch data. Please try again.");
     }
   };
 
@@ -62,6 +69,13 @@ const Map = () => {
     }
   }, [filteredOutbreaks, selectedDisease]);
 
+  // Function to get marker color based on the number of cases
+  const getMarkerColor = (cases) => {
+    if (cases > 100000) return '#ff0000';  // Red for severe outbreaks
+    if (cases > 10000) return '#ffa500';   // Orange for moderate outbreaks
+    return '#00ff00';  // Green for less severe outbreaks
+  };
+
   // Function to update stats on clicking a specific country marker
   const handleClick = (outbreak) => {
     const totalCases = outbreak.cases || 0;
@@ -77,7 +91,9 @@ const Map = () => {
     <div>
       {/* Dropdown and Stats Container */}
       <div className="dropdown-container">
+        
         <select
+          id="diseaseDropdown"
           value={selectedDisease}
           onChange={e => setSelectedDisease(e.target.value)}
           className="dropdown"
@@ -104,15 +120,18 @@ const Map = () => {
         maxBoundsViscosity={1.0} scrollWheelZoom={false} maxZoom={8}
         style={{ height: '600px', width: '100%' }}
       >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <TileLayer
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          attribution='&copy; CartoDB'
+        />
 
         {filteredOutbreaks.map((outbreak, index) => (
           <CircleMarker
             key={index}
             center={[outbreak.lat, outbreak.lng]}   // Latitude/longitude from API
             radius={6}                             // Marker size can vary based on severity
-            fillColor="red"                         // Epicenter dot color
-            color="red"
+            fillColor={getMarkerColor(outbreak.cases)}  // Dynamic marker color based on cases
+            color={getMarkerColor(outbreak.cases)}     // Border color
             weight={1}
             fillOpacity={0.5}                      // Opacity of the dot
             eventHandlers={{
@@ -125,7 +144,7 @@ const Map = () => {
                 <p><strong>Location:</strong> {outbreak.location}</p>
                 <p><strong>Total Cases:</strong> {outbreak.cases}</p>
                 <p><strong>Active Cases:</strong> {outbreak.active_cases}</p>
-                <p><strong>Click for STATS</strong> </p>
+                <p><strong>Click for STATS</strong></p>
               </div>
             </Tooltip>
           </CircleMarker>
