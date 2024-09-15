@@ -11,7 +11,7 @@ function navigation() {
 
       <div className='menu'>
 
-        <p className='link'>Diseases <FaChevronDown/></p>
+        <p className='link'>Diseases &nbsp;<FaChevronDown/></p>
         <p className='link'>About Data</p>
         <p className='link'>News</p>
         <p className='link'>About us</p>

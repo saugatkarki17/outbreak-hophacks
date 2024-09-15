@@ -72,22 +72,36 @@ letter-spacing: 0.1px;
   letter-spacing: 0.2px;
   display: flex;
   align-items: center;
+cursor: pointer;
 
-
+}
+.leaflet-touch .leaflet-bar a:last-child {
+  color: #65676d;
+  border: none;
+  outline: none;
+}
+.leaflet-touch .leaflet-bar a:first-child {
+  color: #6a6c78;
+  border: none;
+  outline: none;
+  
 }
 .stats {
   color: white;
   letter-spacing: 0.2px;
 }
 .dropdown {
+  
   padding: 15px 26px;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.2px;
   color: #4d4d4de7;
   outline: none;
+  border-radius: 5px;
   border: none;
   background-color: #ffffffe2;
+  
 }
 .search {
   width: 15rem;
@@ -98,7 +112,9 @@ letter-spacing: 0.1px;
   align-items: center;
   border-radius: 10px;
   padding-left: 12px;
+
 }
+
 .search-icon {
   margin-left: 0.9rem;
   color: #757FB2;

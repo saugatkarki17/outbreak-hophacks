@@ -96,9 +96,9 @@ const Map = () => {
           id="diseaseDropdown"
           value={selectedDisease}
           onChange={e => setSelectedDisease(e.target.value)}
-          className="dropdown"
+          className="dropdown" 
         >
-          <option value="COVID-19">COVID-19</option>
+          <option value="COVID-19" >COVID-19</option>
           <option value="Flu">Flu</option>
           <option value="Measles">Measles</option>
           <option value="Ebola">Ebola</option>
@@ -106,10 +106,10 @@ const Map = () => {
         </select>
 
         <div className="stats">
-          <div className='stats-initial'><p className='stats-initial-p'>Location: </p>{clickedLocation}</div>
-          <div className='stats-initial'><p className='stats-initial-p'>Total Cases:</p> {clickedStats ? clickedStats.totalCases : globalStats.totalCases}</div>
+          <div className='stats-initial'><p className='stats-initial-p'>Location:</p> {clickedLocation}</div>
+          <div className='stats-initial'><p className='stats-initial-p'>Total Cases: </p>{clickedStats ? clickedStats.totalCases : globalStats.totalCases}</div>
           <div className='stats-initial'><p className='stats-initial-p'>Total Recovered:</p> {clickedStats ? clickedStats.totalRecovered : globalStats.totalRecovered}</div>
-          <div className='stats-initial'><p className='stats-initial-p'>Total Deaths:</p> {clickedStats ? clickedStats.totalDeaths : globalStats.totalDeaths}</div>
+          <div className='stats-initial'><p className='stats-initial-p'>Total Deaths: </p>{clickedStats ? clickedStats.totalDeaths : globalStats.totalDeaths}</div>
           <div className='stats-initial'><p className='stats-initial-p'>Total Active:</p> {clickedStats ? clickedStats.totalActive : globalStats.totalActive}</div>
         </div>
       </div>
