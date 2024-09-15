@@ -15,7 +15,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
+// Calling APIs
 app.use('/api/outbreaks', outbreakRoutes);
 app.use('/api/flu-outbreaks', outbreakRoutesFlu);
 app.use('/api/Ebola-outbreaks', outbreakRoutesEbola);

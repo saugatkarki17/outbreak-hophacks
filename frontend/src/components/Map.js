@@ -47,7 +47,7 @@ const Map = () => {
   // Fetch the default disease (COVID-19) on component mount
   useEffect(() => {
     fetchDiseaseData('COVID-19');
-  }, []); // Empty dependency array ensures this only runs once after the component is mounted
+  }, []); 
 
   // Update data when selected disease changes
   useEffect(() => {

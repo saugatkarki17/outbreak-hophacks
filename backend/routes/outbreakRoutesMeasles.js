@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
+  // Creates a dummy API lack of time and functional APIs
 
-// Sample outbreak data for different diseases
 const outbreaks = [
     {
       location: "United States",
@@ -1345,17 +1345,14 @@ const outbreaks = [
     }
   });
 
-// Define a route to return outbreak data based on the disease query
 router.get('/', (req, res) => {
   const { disease } = req.query;
 
   if (disease) {
-    // Filter data based on the disease parameter
     const filteredOutbreaks = outbreaks.filter(outbreak => outbreak.disease === disease);
     return res.json(filteredOutbreaks);
   }
 
-  // Return all data if no specific disease is requested
   res.json(outbreaks);
 });
 

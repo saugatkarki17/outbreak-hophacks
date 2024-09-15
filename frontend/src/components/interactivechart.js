@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
-// Register necessary chart.js components
+
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const InteractiveChart = () => {
@@ -13,11 +13,11 @@ const InteractiveChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/prediction.json'); // Fetch prediction.json from the public folder
+        const response = await fetch('/prediction.json'); 
         const data = await response.json();
 
-        const labels = data.map(entry => entry.date); // Assuming each entry has a 'date' field
-        const cases = data.map(entry => entry.cases); // Assuming each entry has a 'cases' field
+        const labels = data.map(entry => entry.date); 
+        const cases = data.map(entry => entry.cases); 
 
         setChartData({
           labels: labels,
@@ -79,7 +79,7 @@ const InteractiveChart = () => {
   };
 
   return (
-    <div className='graph-div' style={{ width: '1000px', height: '600px' }}> {/* Adjust size here */}
+    <div className='graph-div' style={{ width: '1000px', height: '600px' }}> {}
       {loading ? <p>Loading chart...</p> : <Line data={chartData} options={options} />}
     </div>
   );
