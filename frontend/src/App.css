@@ -10,6 +10,10 @@ scroll-behavior: smooth;
 .App {
   text-align: center;
 }
+.link {
+  text-decoration: none;
+  color: inherit; 
+}
 
 
 /* App.css */
@@ -64,13 +68,26 @@ letter-spacing: 0.1px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  
+}
+
+
+.logoDiv1 {
+  width: 20rem;
+  height: 15rem;
+  background-image: url(./images/OUTSPREAD.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  animation: slideInFromTop 1s ease-out; 
 }
 .menu {
   width: 30%;
   display: flex;
   justify-content: space-between;
-
 }
+
 .link {
   font-size: 14.2px;
   color: #4d4d4d;
@@ -79,8 +96,8 @@ letter-spacing: 0.1px;
   display: flex;
   align-items: center;
 cursor: pointer;
-
 }
+
 .leaflet-touch .leaflet-bar a:last-child {
   color: #65676d;
   border: none;
@@ -174,4 +191,68 @@ cursor: pointer;
   color: #585858;
   font-weight: 500;
   letter-spacing: 0.1px;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide{
+  animation: slideInFromTop 1s ease-out; 
+  font-size: 2rem; 
+  color: #333; 
+}
+#c {
+  margin-left: 80px;
+  margin-right: 80px; 
+  margin-bottom: 20px;
+  text-align:justify;
+  animation: slideInFromTop 1s ease-out; 
+
+}
+
+.description-div{
+
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom:10rem;
+}
+
+.imgd{
+  display: flex;
+  gap: 30px; 
+  justify-content: center; 
+  margin-bottom: 50px;
+  
+}
+
+.img1 {
+  flex: 1; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;  
+  height: 400px;
+  background-image: url(./images/predGraph1.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 1
+}
+.img2 {
+  flex: 1; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: 400px;
+  background-image: url(./images/predGraph2.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

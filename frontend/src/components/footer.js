@@ -20,7 +20,7 @@ function footer() {
         <p className='link' id='quick-links-f'>Diseases &nbsp;<FaChevronDown/></p>
         <p className='link' id='quick-links-f'>About Data</p>
         <p className='link' id='quick-links-f'>News</p>
-        <p className='link' id='quick-links-f'>About us</p>
+        <p to='/about' className='link' id='quick-links-f'>About us</p>
 
       </div>
       <div className='menu-footer'>

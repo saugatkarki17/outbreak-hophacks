@@ -79,9 +79,23 @@ const InteractiveChart = () => {
   };
 
   return (
-    <div className='graph-div' style={{ width: '1000px', height: '600px' }}> {}
+    <div className='graph-div' style={{ width: '1000px', height: '600px' , marginBottom : '30rem'}}> {}
       {loading ? <p>Loading chart...</p> : <Line data={chartData} options={options} />}
+      <div className='description-div' >
+      <div className='imgd'>
+        <div className='img1'>
+        </div>
+        <div className='img2'>
+          
+       </div>
+      </div>
+        <p id="des">
+          This chart represents the trend of COVID-19 cases over time, showing daily fluctuations and notable increases.
+          The data provides insight into the pandemic's progression during the specified period and can help in understanding the spread and impact of the virus.
+        </p>
+      </div>
     </div>
+
   );
 };
 

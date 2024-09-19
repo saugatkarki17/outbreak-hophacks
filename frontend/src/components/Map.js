@@ -118,7 +118,7 @@ const Map = () => {
       <MapContainer
         center={[35, -30]} zoom={3} minZoom={2} maxBounds={bounds}
         maxBoundsViscosity={1.0} scrollWheelZoom={false} maxZoom={8}
-        style={{ height: '600px', width: '100%' }}
+        style={{ height: '700px', width: '100%' }}
       >
         <TileLayer
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
